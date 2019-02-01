@@ -16,5 +16,10 @@ namespace Chapter01
 		{
 			InitializeComponent();
 		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			this.label1.Text = "Hello C#";
+		}
 	}
 }
