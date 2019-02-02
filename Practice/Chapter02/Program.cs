@@ -22,7 +22,8 @@ namespace Chapter02
 			// Application.Run(new Form4());	// 타이머 예제
 			// Application.Run(new Form5());	// 리스트 추가 예제
 			// Application.Run(new Form6());	// 입력 목록 보기 예제
-			Application.Run(new Form7());	// 그림 보기 예제
+			// Application.Run(new Form7());	// 그림 보기 예제
+			Application.Run(new Form8());	// 상태 진행 예제
 		}
 	}
 }
