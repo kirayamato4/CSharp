@@ -17,7 +17,8 @@ namespace Chapter03
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			// Application.Run(new Form1());	// 트레이 아이콘 예제
-			Application.Run(new Form2());	// 폼 꾸미기 예제
+			// Application.Run(new Form2());	// 폼 꾸미기 예제
+			Application.Run(new Form3());	// 폰트 꾸미기 예제
 		}
 	}
 }
