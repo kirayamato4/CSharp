@@ -20,7 +20,8 @@ namespace Chapter03
 			// Application.Run(new Form2());	// 폼 꾸미기 예제
 			// Application.Run(new Form3());	// 폰트 꾸미기 예제
 			// Application.Run(new Form4());	// 트레이 메세지 예제
-			Application.Run( new Form5() ); // 웹 다운로더 예제
+			// Application.Run( new Form5() ); // 웹 다운로더 예제
+			Application.Run( new Form6() );	// 프로세스 보기 예제
 		}
 	}
 }
