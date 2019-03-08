@@ -117,5 +117,10 @@ namespace Chapter04
 
 			MessageBox.Show( "파일이 저장되었습니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information );
 		}
+
+		private void Form1_Load( object sender, EventArgs e )
+		{
+
+		}
 	}
 }
