@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
 
 namespace LogExtractor
 {
@@ -126,5 +127,62 @@ namespace LogExtractor
 				lvFolder.Items.Add( item );
 			}
 		}
+
+		#region EXTRACT_WITH_THREAD
+		private Thread extractThread = null;
+		private const long BUFFER_MAX = 4096;
+		private byte[] buffer = new byte[ BUFFER_MAX ];
+
+		private void button1_Click( object sender, EventArgs e )
+		{
+			if( m_bExtract )
+				return;
+
+			m_bExtract = true;
+
+			progressBar.Maximum = lvFolder.SelectedItems.Count;
+
+			extractThread = new Thread( new ParameterizedThreadStart( ExtractFile ) );
+			extractThread.Start( lvFolder );
+		}
+
+		ListView GetFolderListView()
+		{
+			return lvFolder;
+		}
+
+		private void ExtractFile( object obj )
+		{
+			ListView lvFolder = obj as ListView;
+
+			m_bExtract = false;
+		}
+
+		private void Test( ListView lv )
+		{
+
+		}
+
+		public delegate void SetFileNameLabelCallBack( string fileName );
+		void SetFileNameLabel( string fileName )
+		{
+			lbFileName.Text = fileName;
+		}
+
+		public delegate void SetProgressCallBack( int value );
+		void SetProgress( int value )
+		{
+			if( progressBar.InvokeRequired )
+			{
+				SetProgressCallBack callBack = new SetProgressCallBack( SetProgress );
+				Invoke( callBack, new object[] { value } );
+			}
+			else
+			{
+				progressBar.Value = value;
+			}
+		}
+
+		#endregion
 	}
 }
