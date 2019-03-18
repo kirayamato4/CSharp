@@ -20,7 +20,8 @@ namespace Chapter04
 			// Application.Run( new Form2() );	// 파일 보기 예제
 			// Application.Run( new Form3() );	// 파일 복사 이동 예제
 			// Application.Run( new Form4() );	// 파일 지우기 예제
-			Application.Run( new Form5() );	// 파일 모니터 예제
+			// Application.Run( new Form5() );	// 파일 모니터 예제
+			Application.Run( new Note() );	// 메모장 예제
 		}
 	}
 }
