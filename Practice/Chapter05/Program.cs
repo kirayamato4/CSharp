@@ -16,7 +16,8 @@ namespace Chapter05
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault( false );
-			Application.Run( new Form1() );	// 우산 폼 예제
+			// Application.Run( new Form1() );	// 우산 폼 예제
+			Application.Run( new Form2() );
 		}
 	}
 }
