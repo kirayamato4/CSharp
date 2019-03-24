@@ -19,7 +19,8 @@ namespace Chapter05
 			// Application.Run( new Form1() );	// 우산 폼 예제
 			// Application.Run( new Form2() );	// 시스템 성능 보기 예제
 			// Application.Run( new Form3() );	// 워터마킹 예제
-			Application.Run( new Form4() );	// 그래프 그리기 예제
+			// Application.Run( new Form4() );	// 그래프 그리기 예제
+			Application.Run( new Form5() );	// 화면 캡쳐 예제
 		}
 	}
 }
